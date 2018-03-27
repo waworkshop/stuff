@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="WinRTTestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinRTTestApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="TextIn" Text="Hello World"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button Margin="20" Click="Button_Click" Width="150" Height="30">Put With Copy</Button>
+            <Button Margin="20" Click="Button_Click_1"  Width="150" Height="30">Put</Button>
+            <Button Margin="20" Click="Button_Click_2"  Width="150" Height="30">Get</Button>
+            <Button Margin="20" Click="Button_Click_3"  Width="150" Height="30">Reverse</Button>
+        </StackPanel>
+    </Grid>
+</Page>
