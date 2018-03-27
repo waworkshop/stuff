@@ -1,3 +1,6 @@
 .vs
 
 
+/Socket/.vs/SocketWhatsApp/v15/Server/sqlite3
+/Socket/SocketWhatsApp/bin/x86/Debug
+/Socket/SocketWhatsApp/obj
