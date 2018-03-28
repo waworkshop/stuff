@@ -25569,26 +25569,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PeterStrange\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+    "C:\\Users\\pierlag\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PeterStrange\\source\\repos\\Contacts\\Contacts\\Contacts.csproj",
+      "projectUniqueName": "C:\\Users\\pierlag\\Documents\\GitHub\\WhatsApp\\Contacts\\Contacts\\Contacts.csproj",
       "projectName": "Contacts",
-      "projectPath": "C:\\Users\\PeterStrange\\source\\repos\\Contacts\\Contacts\\Contacts.csproj",
-      "packagesPath": "C:\\Users\\PeterStrange\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PeterStrange\\source\\repos\\Contacts\\Contacts\\obj\\",
+      "projectPath": "C:\\Users\\pierlag\\Documents\\GitHub\\WhatsApp\\Contacts\\Contacts\\Contacts.csproj",
+      "packagesPath": "C:\\Users\\pierlag\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pierlag\\Documents\\GitHub\\WhatsApp\\Contacts\\Contacts\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\PeterStrange\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pierlag\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

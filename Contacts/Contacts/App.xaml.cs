@@ -73,6 +73,8 @@ namespace Contacts
             }
         }
 
+        
+
         /// <summary>
         /// Invoked when Navigation to a certain page fails
         /// </summary>

@@ -1,1 +1,1 @@
-C:\Users\PeterStrange\source\repos\Contacts\Contacts\Contacts.csproj;arm
+C:\Users\pierlag\Documents\GitHub\WhatsApp\Contacts\Contacts\Contacts.csproj;arm

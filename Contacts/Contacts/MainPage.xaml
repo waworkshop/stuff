@@ -9,10 +9,13 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Orientation="Vertical">
-            
-            <Button x:Name="GetAllContact"  Width="100" Height="100" Click="GetAllContact_Click">GetContacts</Button>
             <StackPanel Orientation="Horizontal">
-                
+                <Button x:Name="GetAllContact"  Width="100" Height="100" Click="GetAllContact_Click">GetContacts</Button>
+                <Button x:Name="CreateContact" Width="188" Height="100" Margin="0,0,0,0" Click="CreateContact_Click">Create Contact Task</Button>
+                <Button x:Name="OpenContact" Width="100" Height="100" Click="OpenContact_Click">Open Contact</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+
                 <Button x:Name="SearchContactbyPhone"  Width="100" Height="100" Click="Search_Click">Search By Phone</Button>
                 <TextBox x:Name="tbNumber" Width="400" Text="+44" FontSize="40" />
             </StackPanel>
