@@ -14,11 +14,15 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBox x:Name="TextIn" Text="Hello World"/>
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <Button Margin="20" Click="Button_Click" Width="150" Height="30">Put With Copy</Button>
-            <Button Margin="20" Click="Button_Click_1"  Width="150" Height="30">Put</Button>
-            <Button Margin="20" Click="Button_Click_2"  Width="150" Height="30">Get</Button>
-            <Button Margin="20" Click="Button_Click_3"  Width="150" Height="30">Reverse</Button>
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <Button Margin="20" Click="Button_Click" Width="150" Height="30">Put W with Copy</Button>
+            <Button Margin="20" Click="Button_Click_1"  Width="150" Height="30">Put W</Button>
+            <Button Margin="20" Click="Button_Click_3"  Width="150" Height="30">Reverse via W</Button>
+            <Button Margin="20" Click="Button_Click_4"  Width="150" Height="30">Create C buffer</Button>
+            <Button Margin="20" Click="Button_Click_5"  Width="150" Height="30">Change buffer via C</Button>
+
+            <Button Margin="40,20,20,20" Click="Button_Click_2"  Width="150" Height="30">Show W Buffer</Button>
+            <Button Margin="20" Click="Button_Click_6"  Width="150" Height="30">Show C# buffer</Button>
         </StackPanel>
     </Grid>
 </Page>
