@@ -206,6 +206,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="MyBuffer.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Class1.h" />
   </ItemGroup>

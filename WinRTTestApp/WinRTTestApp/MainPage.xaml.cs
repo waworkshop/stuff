@@ -28,12 +28,14 @@ namespace WinRTTestApp
     {
         private WAByteBuffer bob = new WAByteBuffer();
         private byte[] MyBuffer;
+        private IBuffer localBuffer = null;
 
         public MainPage()
         {
             this.InitializeComponent();
             MyBuffer = new byte[120];
             CryptographicBuffer.CopyToByteArray(CryptographicBuffer.ConvertStringToBinary("This Is My String", BinaryStringEncoding.Utf8), out MyBuffer);
+            localBuffer = CryptographicBuffer.CreateFromByteArray(MyBuffer);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -45,7 +47,36 @@ namespace WinRTTestApp
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             // Put
-            bob.Put(CryptographicBuffer.CreateFromByteArray(MyBuffer));
+            bob.Put(localBuffer);
+        }
+
+        private async void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (bob.ChangeTheBufferConent())
+            {
+                string message = CryptographicBuffer.ConvertBinaryToString(BinaryStringEncoding.Utf8, localBuffer);
+
+                MessageDialog md = new MessageDialog(message);
+                await md.ShowAsync();
+            }
+        }
+
+        private async void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            bob.MakeNativeBuffer();
+            // Get
+            bob.Get(out localBuffer);
+
+            string message = CryptographicBuffer.ConvertBinaryToString(BinaryStringEncoding.Utf8, localBuffer);
+
+            MessageDialog md = new MessageDialog(message);
+            await md.ShowAsync();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            bob.ChangeTheNativeBufferConent();
+
         }
 
         private async void Button_Click_2(object sender, RoutedEventArgs e)
@@ -60,13 +91,14 @@ namespace WinRTTestApp
             await md.ShowAsync();
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+
+        private async void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            if (bob.ChangeTheBufferConent())
-            {
-                // Now get the content
-                Button_Click_2(sender, e);
-            }
+            string message = CryptographicBuffer.ConvertBinaryToString(BinaryStringEncoding.Utf8, localBuffer);
+
+            MessageDialog md = new MessageDialog(message);
+            await md.ShowAsync();
         }
+
     }
 }

@@ -2,6 +2,7 @@
 #include <wrl.h>  
 #include <robuffer.h>  
 #include "Class1.h"
+#include "MyBuffer.h"
 using namespace Windows::Storage::Streams;
 using namespace Microsoft::WRL;
 using namespace WindowsRuntimeComponent1;
@@ -11,6 +12,14 @@ typedef uint8 byte;
 
 WAByteBuffer::WAByteBuffer()
 {
+    localbuffer = new byte[256] { '\0' };
+    localbuffer[0] = 'H';
+    localbuffer[1] = 'e';
+    localbuffer[2] = 'l';
+    localbuffer[3] = 'l';
+    localbuffer[4] = 'o';
+    localbuffer[5] = ' ';
+    localbuffer[6] = 'C';
 }
 
 bool WAByteBuffer::Get(Windows::Storage::Streams::IBuffer^* intOutArray)
@@ -92,3 +101,35 @@ byte* WAByteBuffer::GetPointerToData(IBuffer^ pixelBuffer, unsigned int *length)
     return data;
 }
 
+bool WAByteBuffer::MakeNativeBuffer()
+{
+    //auto var = new ArrayReference<byte>(localbuffer, 256);
+
+    //Array<byte>^ array = reinterpret_cast<Array<byte>^>(var);
+
+
+    //buffer = Windows::Security::Cryptography::CryptographicBuffer::CreateFromByteArray(array);
+
+
+    ComPtr<MyBuffer> nativeBuffer;
+    Microsoft::WRL::Details::MakeAndInitialize<MyBuffer>(&nativeBuffer, localbuffer, 256);
+    auto iinspectable = reinterpret_cast<IInspectable *>(nativeBuffer.Get());
+    buffer = reinterpret_cast<Windows::Storage::Streams::IBuffer ^>(iinspectable);
+
+    return true;
+
+    return true;
+}
+
+bool WAByteBuffer::ChangeTheNativeBufferConent()
+{
+    localbuffer[0] = 'B';
+    localbuffer[1] = 'y';
+    localbuffer[2] = 'e';
+    localbuffer[3] = '!';
+    localbuffer[4] = '\0';
+    localbuffer[5] = '\0';
+    localbuffer[6] = '\0';
+
+    return true;
+}
